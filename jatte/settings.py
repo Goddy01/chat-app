@@ -33,6 +33,12 @@ LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/chat-admin/'
 LOGOUT_REDIRECT_URL = '/'
 
+
+CHANNEL_LAYERS = {
+    'defualt': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    }
+}
 # Application definition
 
 INSTALLED_APPS = [
