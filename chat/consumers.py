@@ -16,3 +16,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
         # JOIN ROOM GROUP
         await self.channel_layer.group_add(self.room_group_name, self.channel_name) # the await keyword waits for this line to finish before proceeding to the next line
         await self.accept() # sends a msg to the client indicating that the server has accepted the websocket conn, once the client receives this msg it can start sending and receiving msgs through the websocket connection
+
+    async def disconnect(self):
+        """To disconnect a connection"""
+        await self.channel_layer.group_discard(self.room_group_name, self.channel_name)
