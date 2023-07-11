@@ -591,6 +591,10 @@ video {
   height: 1.5rem;
 }
 
+.h-\[300px\] {
+  height: 300px;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -639,6 +643,10 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-scroll {
+  overflow: scroll;
 }
 
 .rounded-xl {
