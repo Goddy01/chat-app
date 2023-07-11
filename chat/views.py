@@ -6,12 +6,13 @@ from .models import Room
 # Create your views here.
 
 @require_POST
-def create_room(request):
+def create_room(request, uuid):
     name = request.POST.get('name', '')
     url = request.POST.get('url', '')
 
     Room.objects.create(
         client=name,
-        url=url
+        url=url,
+        uuid=uuid
     )
     return JsonResponse({'message': 'room created'})
